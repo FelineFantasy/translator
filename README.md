@@ -1,51 +1,90 @@
-# Консольный переводчик 🌐
+# Console Translator 🌐
 
 [![Python Version](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![deep_translator](https://img.shields.io/badge/deep_translator-1.x-orange.svg)](https://pypi.org/project/deep-translator/)
 
-Простой консольный переводчик, написанный на Python. Переводите текст между русским и английским языками прямо в терминале!
+A simple console translator written in Python. Translate text between Russian and English languages right in your terminal!
 
-## 📋 Содержание
-- [Описание](#описание)
-- [Как использовать](#как-использовать)
-- [Установка](#установка)
-- [Пример работы](#пример-работы)
-- [Файлы проекта](#файлы-проекта)
-- [Требования](#требования)
-- [Планы по развитию](#планы-по-развитию)
-- [Автор](#автор)
+## 📋 Table of Contents
+- [Description](#description)
+- [How to Use](#how-to-use)
+- [Installation](#installation)
+- [Example Usage](#example-usage)
+- [Project Files](#project-files)
+- [Requirements](#requirements)
+- [Future Plans](#future-plans)
+- [Author](#author)
 
-## 📝 Описание
+## 📝 Description
 
-**Консольный переводчик** — это простая программа для перевода текста прямо в командной строке. Она использует библиотеку `deep_translator`, которая обращается к Google Translate для получения качественного перевода.
+**Console Translator** is a simple program for translating text directly from the command line. It uses the `deep_translator` library, which connects to Google Translate for high-quality translations.
 
-### Особенности:
-- 🔄 **Два направления** — русский → английский и английский → русский
-- 🚀 **Мгновенный перевод** — быстрый ответ от Google Translate
-- 📦 **Минимализм** — простой интерфейс без лишних наворотов
-- 🛡️ **Надёжность** — обработка ошибок при переводе
-- 🔌 **Не требует API ключей** — работает сразу после установки
+### Features:
+- 🔄 **Two directions** — Russian → English and English → Russian
+- 🚀 **Instant translation** — Fast response from Google Translate
+- 📦 **Minimalism** — Simple interface without unnecessary features
+- 🛡️ **Reliability** — Error handling during translation
+- 🔌 **No API keys required** — Works out of the box
 
-## 🎮 Как использовать
+## 🎮 How to Use
 
-1. Запустите программу
-2. Выберите направление перевода (1 или 2)
-3. Введите текст для перевода
-4. Получите готовый перевод
+1. Run the program
+2. Select translation direction (1 or 2)
+3. Enter text to translate
+4. Get the translation
 
-## ⚙️ Установка
+## ⚙️ Installation
 
-### Вариант 1: Скачать архив
-1. Нажмите зелёную кнопку **"Code"** на этой странице
-2. Выберите **"Download ZIP"**
-3. Распакуйте архив
-4. Установите зависимости: `pip install -r requirements.txt`
-5. Запустите программу: `python translator.py`
+### Option 1: Download ZIP
+1. Click the green **"Code"** button on this page
+2. Select **"Download ZIP"**
+3. Extract the archive
+4. Install dependencies: `pip install -r requirements.txt`
+5. Run the program: `python translator.py`
 
-### Вариант 2: Клонировать репозиторий
+### Option 2: Clone repository
 ```bash
 git clone https://github.com/FelineFantasy/translator.git
 cd translator
 pip install -r requirements.txt
 python translator.py
+```
+
+## 💻 Example Usage
+
+```
+Select translation direction:
+1. Russian → English
+2. English → Russian
+> 1
+
+Enter text: Привет, мир!
+Translation: Hello, world!
+```
+
+## 📁 Project Files
+
+```
+translator/
+├── translator.py       # Main program file
+├── requirements.txt    # Dependencies
+└── README.md           # Documentation
+```
+
+## 📋 Requirements
+
+- Python 3.x
+- deep_translator
+
+## 🔮 Future Plans
+
+- [ ] Add support for more languages
+- [ ] Translation history
+- [ ] Save translations to file
+
+## 👤 Author
+
+**FelineFantasy**
+
+License: MIT
