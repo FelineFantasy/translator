@@ -84,7 +84,5 @@ translator/
 - [ ] Save translations to file
 
 ## 👤 Author
-
-**FelineFantasy**
-
-License: MIT
+- **FelineFantasy**
+- **License**: MIT
