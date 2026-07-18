@@ -69,6 +69,7 @@ Translation: Hello, world!
 translator/
 ├── translator.py       # Main program file
 ├── requirements.txt    # Dependencies
+├── .gitignore          # Files and folders ignored by Git
 └── README.md           # Documentation
 ```
 
