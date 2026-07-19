@@ -70,6 +70,7 @@ translator/
 ├── translator.py       # Main program file
 ├── requirements.txt    # Dependencies
 ├── .gitignore          # Files and folders ignored by Git
+├── LICENCE
 └── README.md           # Documentation
 ```
 
