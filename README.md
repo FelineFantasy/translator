@@ -67,11 +67,13 @@ Translation: Hello, world!
 
 ```
 translator/
-├── translator.py       # Main program file
-├── requirements.txt    # Dependencies
-├── .gitignore          # Files and folders ignored by Git
-├── LICENCE
-└── README.md           # Documentation
+├── .github/
+│   └── FUNDING.yml           # Support link for DonationAlerts
+├── translator.py             # Main program file
+├── requirements.txt          # Dependencies
+├── .gitignore                # Files and folders ignored by Git
+├── LICENCE                   # MIT License
+└── README.md                 # Documentation
 ```
 
 ## 📋 Requirements
