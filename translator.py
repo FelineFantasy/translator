@@ -1,6 +1,7 @@
 from deep_translator import GoogleTranslator
+import locale
+import os
 
-# Тексты интерфейса на разных языках
 LOCALES = {
     'en': {
         'title': "Console Translator",
@@ -16,6 +17,7 @@ LOCALES = {
         'result': "Translation: ",
         'invalid_choice': "Invalid choice!",
         'goodbye': "Goodbye!",
+        'lang_detected': "Interface language: English",
     },
     'ru': {
         'title': "Консольный переводчик",
@@ -31,37 +33,73 @@ LOCALES = {
         'result': "Перевод: ",
         'invalid_choice': "Неверный выбор!",
         'goodbye': "До свидания!",
+        'lang_detected': "Язык интерфейса: Русский",
     }
 }
 
 translator_ru_en = GoogleTranslator(source='ru', target='en')
 translator_en_ru = GoogleTranslator(source='en', target='ru')
 
-def get_locale():
-    """Запрашивает у пользователя язык интерфейса"""
-    print("Select language / Выберите язык:")
+def get_system_language():
+    try:
+        lang = locale.getdefaultlocale()[0]
+        if lang and lang[:2] in LOCALES:
+            return lang[:2]
+    except:
+        pass
+    
+    try:
+        lang = os.environ.get('LANG', '') or os.environ.get('LANGUAGE', '')
+        if lang and lang[:2] in LOCALES:
+            return lang[:2]
+    except:
+        pass
+    
+    if os.name == 'nt':
+        try:
+            import subprocess
+            cmd = 'powershell -command "Get-WinSystemLocale | Select-Object -ExpandProperty Name"'
+            result = subprocess.run(cmd, capture_output=True, text=True, shell=True)
+            lang = result.stdout.strip()[:2]
+            if lang in LOCALES:
+                return lang
+        except:
+            pass
+    
+    print("\n" + "=" * 40)
+    print("Unable to detect system language / Не удалось определить язык системы")
+    print("=" * 40)
     print("1. English")
     print("2. Русский")
-    choice = input("Choice / Выбор (1-2): ").strip()
-    return 'en' if choice == '1' else 'ru'
+    
+    while True:
+        choice = input("Choice / Выбор (1-2): ").strip()
+        if choice == '1':
+            return 'en'
+        elif choice == '2':
+            return 'ru'
+        else:
+            print("Invalid choice / Неверный выбор. Please try again / Попробуйте снова.")
 
 def main():
-    locale = get_locale()
-    t = LOCALES[locale]
+    locale_code = get_system_language()
+    t = LOCALES[locale_code]
     
+    print(t['lang_detected'])
     print(t['title'])
     print(t['separator'])
-
+    
     while True:
         print(f"\n{t['menu_0']}")
         print(t['menu_1'])
         print(t['menu_2'])
-
+        
         choice = input(t['prompt']).strip()
-
+        
         if choice == "0":
             print(t['goodbye'])
             break
+            
         elif choice == "1":
             user_text = input(t['input_ru']).strip()
             if not user_text:
@@ -72,6 +110,7 @@ def main():
                 print(f"{t['result']}{result}")
             except Exception as e:
                 print(f"{t['error_translate']}{e}")
+                
         elif choice == "2":
             user_text = input(t['input_en']).strip()
             if not user_text:
@@ -82,6 +121,7 @@ def main():
                 print(f"{t['result']}{result}")
             except Exception as e:
                 print(f"{t['error_translate']}{e}")
+                
         else:
             print(t['invalid_choice'])
 
