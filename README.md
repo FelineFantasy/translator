@@ -6,16 +6,6 @@
 
 A simple console translator written in Python. Translate text between Russian and English languages right in your terminal!
 
-## 📋 Table of Contents
-- [Description](#description)
-- [How to Use](#how-to-use)
-- [Installation](#installation)
-- [Example Usage](#example-usage)
-- [Project Files](#project-files)
-- [Requirements](#requirements)
-- [Future Plans](#future-plans)
-- [Author](#author)
-
 ## 📝 Description
 
 **Console Translator** is a simple program for translating text directly from the command line. It uses the `deep_translator` library, which connects to Google Translate for high-quality translations.
