@@ -42,7 +42,9 @@ translator_en_ru = GoogleTranslator(source='en', target='ru')
 
 def get_system_language():
     try:
-        lang = locale.getdefaultlocale()[0]
+        import locale
+        locale.setlocale(locale.LC_ALL, '')
+        lang = locale.getlocale()[0]
         if lang and lang[:2] in LOCALES:
             return lang[:2]
     except:
