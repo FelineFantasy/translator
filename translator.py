@@ -5,7 +5,6 @@ Console Translator - multilingual CLI translation tool using Google Translate
 """
 
 from deep_translator import GoogleTranslator
-import locale
 import os
 
 LOCALES = {
