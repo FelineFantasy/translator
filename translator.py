@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from deep_translator import GoogleTranslator
 import locale
 import os
