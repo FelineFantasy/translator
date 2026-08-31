@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+"""
+Console Translator - multilingual CLI translation tool using Google Translate
+"""
+
 from deep_translator import GoogleTranslator
 import locale
 import os
