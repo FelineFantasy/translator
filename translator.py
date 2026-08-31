@@ -10,7 +10,7 @@ import os
 LOCALES = {
     'en': {
         'title': "Console Translator",
-        'separator': "=" * 40,
+        'separator': "=" * 50,
         'menu_0': "0. Exit",
         'menu_1': "1. Russian -> English",
         'menu_2': "2. English -> Russian",
@@ -26,7 +26,7 @@ LOCALES = {
     },
     'ru': {
         'title': "Консольный переводчик",
-        'separator': "=" * 40,
+        'separator': "=" * 50,
         'menu_0': "0. Выход",
         'menu_1': "1. Русский -> Английский",
         'menu_2': "2. Английский -> Русский",
@@ -73,9 +73,9 @@ def get_system_language():
         except:
             pass
     
-    print("\n" + "=" * 40)
+    print("\n" + "=" * 60)
     print("Unable to detect system language / Не удалось определить язык системы")
-    print("=" * 40)
+    print("=" * 60)
     print("1. English")
     print("2. Русский")
     
