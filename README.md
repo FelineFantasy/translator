@@ -71,12 +71,6 @@ translator/
 - Python 3.x
 - deep_translator
 
-## 🔮 Future Plans
-
-- [ ] Add support for more languages
-- [ ] Translation history
-- [ ] Save translations to file
-
 ## 💖 Support the Project
 
 If you enjoy **Console Translator** and want to help keep the project alive, you can support me here:
